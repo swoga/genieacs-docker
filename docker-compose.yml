@@ -6,21 +6,21 @@ services:
       - ./db:/data/db
   genieacs-cwmp:
     command: /genieacs/dist/bin/genieacs-cwmp
-    image: genieacs
+    image: swoga/genieacs
     ports:
       - 7547:7547
     volumes:
       - ./config:/genieacs/config
   genieacs-nbi:
     command: /genieacs/dist/bin/genieacs-nbi
-    image: genieacs
+    image: swoga/genieacs
     ports:
       - 7557:7557
     volumes:
       - ./config:/genieacs/config
   genieacs-ui:
     command: /genieacs/dist/bin/genieacs-ui
-    image: genieacs
+    image: swoga/genieacs
     ports:
       - 3000:3000
     volumes:
