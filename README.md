@@ -1,5 +1,5 @@
-# Docker Image for GenieACS
-Dockerfile and docker-compose.yml for GenieACS master (development of v1.2 at time of writing)
+# Docker Image for [GenieACS](https://github.com/genieacs/genieacs)
+Dockerfile and docker-compose.yml for [GenieACS](https://github.com/genieacs/genieacs) master (development of v1.2 at time of writing)
 
 ## Building Docker Image
 `docker build . -t swoga/genieacs`
