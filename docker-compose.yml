@@ -18,6 +18,13 @@ services:
       - 7557:7557
     volumes:
       - ./config:/genieacs/config
+  genieacs-fs:
+    command: /genieacs/dist/bin/genieacs-fs
+    image: swoga/genieacs
+    ports:
+      - 7567:7567
+    volumes:
+      - ./config:/genieacs/config
   genieacs-ui:
     command: /genieacs/dist/bin/genieacs-ui
     image: swoga/genieacs
