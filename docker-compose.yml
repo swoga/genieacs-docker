@@ -9,29 +9,25 @@ services:
     image: swoga/genieacs
     ports:
       - 7547:7547
-    volumes:
-      - ./config:/genieacs/config
+    env_file: config.env
   genieacs-nbi:
     command: /genieacs/dist/bin/genieacs-nbi
     image: swoga/genieacs
     ports:
       - 7557:7557
-    volumes:
-      - ./config:/genieacs/config
+    env_file: config.env
   genieacs-fs:
     command: /genieacs/dist/bin/genieacs-fs
     image: swoga/genieacs
     ports:
       - 7567:7567
-    volumes:
-      - ./config:/genieacs/config
+    env_file: config.env
   genieacs-ui:
     command: /genieacs/dist/bin/genieacs-ui
     image: swoga/genieacs
     ports:
       - 3000:3000
-    volumes:
-      - ./config:/genieacs/config
+    env_file: config.env
   mongo-express: 
     image: mongo-express
     ports:
