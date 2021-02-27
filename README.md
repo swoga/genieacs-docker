@@ -4,8 +4,8 @@ Dockerfile and docker-compose.yml for [GenieACS](https://github.com/genieacs/gen
 ## Docker image
 Docker image is available on Docker Hub, Quay.io
 
-docker pull swoga/genieacs
-docker pull quay.io/swoga/genieacs
+`docker pull swoga/genieacs`  
+`docker pull quay.io/swoga/genieacs`  
 
 ## Run Docker Image
 Clone the repository.
