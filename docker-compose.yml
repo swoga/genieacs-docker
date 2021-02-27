@@ -4,30 +4,29 @@ services:
     image: mongo:4
     volumes:
       - ./db:/data/db
-  genieacs-cwmp:
-    command: /genieacs/dist/bin/genieacs-cwmp
-    image: swoga/genieacs
+  genieacs-cwmp: &defaults
+    build: .
+    image: quay.io/swoga/genieacs
+    init: true
+    env_file: config.env
+    command: /usr/local/bin/genieacs-cwmp
     ports:
       - 7547:7547
-    env_file: config.env
   genieacs-nbi:
-    command: /genieacs/dist/bin/genieacs-nbi
-    image: swoga/genieacs
+    <<: *defaults
+    command: /usr/local/bin/genieacs-nbi
     ports:
       - 7557:7557
-    env_file: config.env
   genieacs-fs:
-    command: /genieacs/dist/bin/genieacs-fs
-    image: swoga/genieacs
+    <<: *defaults
+    command: /usr/local/bin/genieacs-fs
     ports:
       - 7567:7567
-    env_file: config.env
   genieacs-ui:
-    command: /genieacs/dist/bin/genieacs-ui
-    image: swoga/genieacs
+    <<: *defaults
+    command: /usr/local/bin/genieacs-ui
     ports:
       - 3000:3000
-    env_file: config.env
   mongo-express: 
     image: mongo-express
     ports:
