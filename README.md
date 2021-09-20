@@ -1,5 +1,5 @@
 # Docker Image for [GenieACS](https://github.com/genieacs/genieacs)
-Dockerfile and docker-compose.yml for [GenieACS](https://github.com/genieacs/genieacs) v1.2.4
+Dockerfile and docker-compose.yml for [GenieACS](https://github.com/genieacs/genieacs) v1.2.7
 
 ## Docker image
 Docker image is available on Docker Hub, Quay.io
